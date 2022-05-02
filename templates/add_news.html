@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block main%}
+<div >
+    <hr class="my-4">
+        <form action="/add_news" method="POST">
+          <div class="row g-3">
+
+
+            <div class="col-12">
+              <label for="username" class="form-label">Заголовок</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="username" placeholder="Заголовок" name="title" required />
+              <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 pt-100">
+              <label for="email" class="form-label">Photo<span class="text-muted">(Обязательно)</span></label>
+              <input type="text" name="photo" class="form-control" placeholder="Путь к файлу" required />
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+              <div class="col-12 pt-100">
+              <label for="text" class="form-label"><Text>Текст новости</Text> <span class="text-muted">(Обязательно)</span></label>
+              <input type="text" class="form-control" placeholder="Hello world" name="text_news" >
+              <div class="invalid-feedback">
+                Please enter text.
+              </div>
+            </div>
+
+              <div class="col-12 pt-100">
+              <label for="text" class="form-label"><Text>Категория</Text> <span class="text-muted">(Обязательно)</span></label>
+              <input type="text" class="form-control" placeholder="Hello world" name="category" >
+              <div class="invalid-feedback">
+                Please enter text.
+              </div>
+            </div>
+
+            </div>
+
+    <hr class="my-4">
+    <input class="w-100 btn btn-primary btn-lg" type="submit"></input>
+    </form>
+    </div>
+{%endblock%}

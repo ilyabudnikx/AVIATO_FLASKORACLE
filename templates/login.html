@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{%block main%}
+
+<div class="card mt-10">
+<article class="card-body">
+<a href="" class="float-right btn btn-outline-primary">Регистрация</a>
+<h4 class="card-title mb-4 mt-1">Вход</h4>
+	 <form action="/login" method="post">
+    <div class="form-group">
+    	<label>Почта, имя пользователя</label>
+        <input name="username" class="form-control" placeholder="Email"  type="text" required />
+    </div> <!-- form-group// -->
+    <div class="form-group">
+    	<a class="float-right" href="#">Забыли?</a>
+    	<label>Почта</label>
+        <input class="form-control" name="password" placeholder="******" type="password" required />
+    </div> <!-- form-group// -->
+    <div class="form-group">
+    <div class="checkbox">
+      <label> <input type="checkbox"> Сохранить пароль </label>
+    </div> <!-- checkbox .// -->
+    </div> <!-- form-group// -->
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary btn-block"></input>
+    </div> <!-- form-group// -->
+</form>
+</article>
+</div>
+
+{%endblock%}

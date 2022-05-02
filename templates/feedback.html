@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 {% block main %}
     {{ super() }}
+{% for cat, msg in get_flashed_messages(True)%}
+    <hr class="my-4">
+
+<div class="alert {{cat}} d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"></use></svg>
+  <div>
+      {{msg}}
+  </div>
+</div>
+{% endfor %}
     <div >
     <hr class="my-4">
         <form action="/feedback" method="POST">
